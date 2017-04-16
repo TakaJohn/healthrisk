@@ -1,0 +1,148 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="m-b-none m-t-sm flex-heading">Register</h3>
+    </div>
+  </div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading font-bold">DETAILS</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="update_profile" id="update_profile" autocomplete="off">
+      <input type="hidden" class="ignore" name="actions" id="actions" value="update_profile">
+      <input type="hidden" class="ignore" name="action_title" id="action_title" value="PROFILE">
+      <input type="hidden" class="ignore" name="user_id" id="user_id" value="">
+      
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <label>Title <small class="font-thin text-danger">(required)</small></label>
+              <select name="title" id="title" class="form-control" data-error="Please select title">
+                <option value="">Select Title</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms">Ms</option>
+              </select>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <label>First Name <small class="font-thin text-danger">(required)</small></label>
+              <input type="text" class="form-control required" data-error="Please fill in users first name" name="name" id="name" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <label>Surname <small class="font-thin text-danger">(required)</small></label>
+              <input type="text" class="form-control required" data-error="Please fill in users surname" name="surname" id="surname" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>National ID</label>
+              <input type="text" class="form-control" data-error="Please fill in users natinal id" name="nationalid" id="nationalid" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Birth Date</label>
+              <input type="text" class="form-control datepicker-input" data-error="Please fill in users birth date" name="birthdate" id="birthdate" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="row"><h4>CONTACT DETAILS</h4></div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label>Address</label>
+          <input type="text" class="form-control" data-error="Please fill in a home address" name="address" id="address" placeholder="Enter home address">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              <label>Area</label>
+              <input type="text" class="form-control" data-error="Please fill in address area e.g Greendale, Hatfield..."  name="area" id="area" placeholder="e.g Greendale, Hatfield" value="">
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <label>City</label>
+              <input type="text" class="form-control" data-error="Please fill in the address city e.g Harare, Bulawayo, Mutare..." name="city" id="city" placeholder="e.g Harare, Bulawayo, Mutare ...." value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="col-sm-12 col-xs-12 m-l-n"><label>Mobile</label></div>
+              <div class="col-sm-4 col-xs-4 m-l-n m-r-n">
+                <select class="form-control" name="country_code" id="country_code" placeholder="+263">
+                  <option value="263">+263</option>
+                </select>
+              </div>
+              <div class="col-sm-8 col-xs-8 m-l-n m-r-n">
+                <input type="text" class="form-control" data-error="Please fill in mobile number e.g +263773987..." name="mobile" id="mobile" placeholder="e.g 773987...." value="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-6">
+              <label>Email</label>
+              <div class="input-group m-b">
+                <span class="input-group-addon">@</span>
+                <input type="email" class="form-control" data-error="Please fill in email address." name="email" id="email" placeholder="Enter email" value="">
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="row"><h4>ACCOUNT SETTINGS</h4></div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              <label>Username <small class="font-thin text-danger">(required)</small></label>
+              <input type="text" class="form-control required" data-error="Please fill in the users username" name="username" id="username" placeholder="" value="" autocomplete="false">
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <label>Password <small class="font-thin text-danger">(required)</small></label>
+              <input type="password" class="form-control required" data-error="Please fill in the users password" name="pswd" id="pswd" placeholder="" value="" autocomplete="false">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-6">
+	            <button type="submit" id="submit" class="btn btn-md btn-primary">UPDATE</button>
+	            <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+	        </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>
+            

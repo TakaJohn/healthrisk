@@ -1,0 +1,261 @@
+<section class="panel panel-default m-t-lg">
+  <header class="panel-heading font-bold">PATIENT DATA</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="collect_patient_data" id="collect_patient_data" autocomplete="off">
+      <input type="hidden" class="ignore required" name="actions" id="actions" value="collect_patient_data">
+      <input type="hidden" class="ignore required" name="action_title" id="action_title" value="COLLECT USER DATA">
+      <input type="hidden" class="ignore" name="user_id" id="user_id" value="">
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <label>Medical Aid</label>
+              <select class="form-control" data-error="Please medical aid provider" name="medaid" id="medaid" placeholder="" value="">
+                <option value=""> Select medical aid </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group meddetails hide">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Medical Aid #</label>
+              <input type="text" class="form-control" data-error="Please fill in medical aid number" name="medaidnumber" id="medaidnumber" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Suffix #</label>
+              <input type="number" class="form-control" data-error="Please fill in suffix number" name="suffix" id="suffix" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="form-group next-health-action hide">
+        <div class="col-sm-12">
+          <a href="#" class="btn btn-info btn-sm" data-function="show_claims">View Claims</a>
+          <a href="#" class="btn btn-primary btn-sm" data-function="show_health_data">Health Data</a>
+          <a href="#" class="btn btn-warning btn-sm" data-function="show_collect_data">Collect Data</a>
+        </div>
+      </div>
+
+      <div class="form-group view-claims col-md-12 hide">
+        <section class="panel panel-default">
+          <header class="panel-heading flex-heading">
+            CLAIM(S) 
+            <i class="fa fa-info-sign text-muted" data-toggle="tooltip" data-placement="bottom" data-title="ajax to load the data."></i> 
+          </header>
+          <div class="table-responsive">
+            <table class="table table-striped m-b-none claims-table" data-ride="datatables">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Member #</th>
+                  <th>Claim #</th>
+                  <th>Amount</th>
+                  <th>Description</th>
+                  <th>Date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody class="claims-grid">
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <section class="scrollable wrapper view_health_data hide">
+        <div class="row">
+          <div class="panel-group m-b details-accordian" id="accordion2">
+          </div>
+        </div>
+      </section>    
+
+      <div class="collect-medical-data hide">
+        <div class="form-group">
+          <div class="col-sm-12">
+            <span class="h4">Health Data</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-12">
+                <label>Wellness Day</label>
+                <select class="form-control" data-error="" name="wellnessday" id="wellnessday" placeholder="" value="">
+                <option value=""> Select wellness day </option>
+              </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group patient-names hide">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" data-error="Please fill in medical aid number" name="name" id="surname" placeholder="" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>Surname</label>
+                <input type="text" class="form-control" data-error="Please fill in surname" name="surname" id="surname" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>Email</label>
+                <input type="email" class="form-control" data-error="Please fill in email address" name="email" id="email" placeholder="" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>Mobile</label>
+                <input type="number" class="form-control" data-error="Please fill in mobile number" name="mobile" id="mobile" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>Height</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" data-error="Please fill in height" name="height" id="height" placeholder="" value="">
+                  <span class="input-group-addon input-sm">cm</span>
+                </div>
+              </div>
+              <div class="col-sm-4 col-xs-6">              
+                <label>Weight</label>
+                <div class="input-group">
+                  <input type="float" class="form-control" data-error="Please fill in weight" name="weight" id="weight" placeholder="" value="">
+                  <span class="input-group-addon input-sm">Kg's</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-12">
+                <label>Body Mass Index</label>
+                <div class="input-group">
+                  <span class="input-group-addon input-sm">BMI</span>
+                  <input type="float" class="form-control" data-error="Please fill in height" name="bmi" id="bmi" placeholder="" value="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>Cholestroral</label>
+                <input type="text" class="form-control" data-error="Please fill in cholestroral" name="cholestroral" id="cholestroral" placeholder="" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>Blood Sugar</label>
+                <input type="text" class="form-control" data-error="Please fill in blood sugar" name="bloodsugar" id="bloodsugar" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>HIV</label>
+                <select class="form-control" data-error="Please select HIV status" name="hiv" id="hiv" placeholder="" value="">
+                  <option value=""> Select HIV Status </option>
+                  <option value="Positive"> Positive </option>
+                  <option value="Negative"> Negative </option>
+                </select>
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>B.P</label>
+                <input type="text" class="form-control" data-error="Please fill in B.P" name="bp" id="bp" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>Pulse Rate</label>
+                <input type="text" class="form-control" data-error="Please fill in pulse rate" name="pulserate" id="pulserate" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>Pathology</label>
+                <select class="form-control" data-error="Please select pathology results" name="pathology" id="pathology" placeholder="" value="">
+                  <option value=""> Select Result </option>
+                  <option value="Yes"> Yes </option>
+                  <option value="No"> No </option>
+                  <option value="Maybe"> Maybe </option>
+                </select>
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>Risk Profile</label>
+                <select class="form-control" data-error="Please select risk profile" name="risk" id="risk" placeholder="" value="">
+                  <option value=""> Select Profile </option>
+                  <option value="Low"> Low </option>
+                  <option value="Moderate"> Moderate </option>
+                  <option value="High"> High </option>
+                  <option value="Very High"> Very High </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-md-12 col-xs-12">
+                <label>Notes</label>
+                <textarea class="form-control" data-error="Please fill in notes" name="notes" id="notes" placeholder="fill in patient notes">
+                  
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-md-6">
+                <button type="submit" id="submit" class="btn btn-md btn-primary">SUBMIT DETAILS</button>
+                <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </form>
+  </div>
+</section>
+            
