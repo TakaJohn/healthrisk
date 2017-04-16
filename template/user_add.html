@@ -1,0 +1,192 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-sm-10">
+      <h3 class="m-b-none m-t-sm flex-heading">CREATE NEW USER</h3>
+      <!--<small>STATISTICS & GRAPH INFORMATION</small>-->
+    </div>
+    <!-- <div class="col-sm-6">
+      <a href="#" data-link="upload_data.php" class="btn btn-info upload-data pull-right hide"> INPUT DATA</a>
+    </div> -->
+  </div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading font-bold">CREATE NEW USER</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="create_user" id="create_user" autocomplete="off">
+      <input type="hidden" class="ignore" name="actions" id="actions" value="create_user">
+      <input type="hidden" class="ignore" name="action_title" id="action_title" value="CREATE NEW USER">
+      <input type="hidden" class="ignore" name="user_id" id="user_id" value="">
+      <input type="hidden" class="ignore" name="profile" id="profile" data-error="Please attach users profile picture">
+      
+      <div class="form-group">
+      	<div class="col-sm-10">
+      		<div class="row">
+	          <div class="col-sm-3 col-xs-6">
+	            <label class="block">Profile picture <small class="font-thin text-danger">(required)</small></label>
+	              <div class="dker text-center line-dashed">
+	                <a href="#" class="profile-pic">
+	                  <img width="90%" class="profile-image" src="images/avatar_default.jpg">                              
+	                </a>
+	              </div>
+	              <input type="file" id="pic-load" name="files[]" class="hide" multiple>
+	              <div class="pic-upload progress progress-sm progress-striped active hide">
+	                <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="0%" style="width: 0%"></div>
+	              </div>
+	            <div class="pic-upload-status hide">Status</div>
+	          </div>
+	        </div>
+      	</div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>First Name <small class="font-thin text-danger">(required)</small></label>
+              <input type="text" class="form-control required" data-error="Please fill in users first name" name="name" id="name" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Surname <small class="font-thin text-danger">(required)</small></label>
+              <input type="text" class="form-control required" data-error="Please fill in users surname" name="surname" id="surname" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Gender</label>
+              <input type="text" class="form-control" data-error="Please fill in users gender" name="gender" id="gender" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Birth Date</label>
+              <input type="text" class="form-control datepicker-input" data-error="Please fill in users birth date" name="birthdate" id="birthdate" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-10">
+        <div class="row"><h4>CONTACT DETAILS</h4></div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <label>Address</label>
+          <textarea rows="5" class="form-control" data-error="Please fill in a home address" name="address" id="address" placeholder="Enter home address"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              <label>Area</label>
+              <input type="text" class="form-control" data-error="Please fill in address area e.g Greendale, Hatfield..."  name="area" id="area" placeholder="e.g Greendale, Hatfield" value="">
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <label>City</label>
+              <input type="text" class="form-control" data-error="Please fill in the address city e.g Harare, Bulawayo, Mutare..." name="city" id="city" placeholder="e.g Harare, Bulawayo, Mutare ...." value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-6">
+              <label>Mobile</label>
+              <input type="text" class="form-control" data-error="Please fill in mobile number e.g +263773987..." name="mobile" id="mobile" placeholder="e.g +263773987...." value="">
+            </div>
+            <div class="col-sm-6">
+              <label>Email</label>
+              <div class="input-group m-b">
+                <span class="input-group-addon">@</span>
+                <input type="email" class="form-control" data-error="Please fill in email address." name="email" id="email" placeholder="Enter email" value="">
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-10">
+        <div class="row"><h4>ACCOUNT SETTINGS</h4></div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-6">
+              <label>User Role</label>
+              <select name="level" id="level" class="form-control required" data-error="Please select the new user role">
+                <option value=''>--select user role--</option>
+                <option value="2">Administrator</option>
+                <option value="3">Member</option>
+              </select>
+            </div>            
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group provinces-select hide">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-6">
+              <label>Province</label>
+              <select multiple="multiple" name="provinces[]" id="provinces" class="form-control select2-multiple" data-error="Please select the users province">
+              </select>
+            </div>           
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              <label>Username <small class="font-thin text-danger">(required)</small></label>
+              <input type="text" class="form-control required" data-error="Please fill in the users username" name="username" id="username" placeholder="" value="" autocomplete="false">
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <label>Password <small class="font-thin text-danger">(required)</small></label>
+              <input type="password" class="form-control required" data-error="Please fill in the users password" name="pswd" id="pswd" placeholder="" value="" autocomplete="false">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-6">
+              <label>User Account Status <small class="font-thin text-danger">(required)</small></label>
+              <select name="status" id="status" class="form-control required" data-error="Please select the users status active/in-active">
+                <option value=''>--select account status--</option>
+                <option value="1">ACTIVE</option>
+                <option value="0">IN-ACTIVE</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-6">
+	          	<button type="reset" class="btn btn-md btn-default">RESET</button>
+	            <button type="submit" id="submit" class="btn btn-md btn-primary">CREATE USER ACCOUNT</button>
+	            <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+	        </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>
+            

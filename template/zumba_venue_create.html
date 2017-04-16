@@ -1,0 +1,42 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3 class="m-b-none m-t-sm">CREATE ZUMBA VENUE</h3>
+      <!--<small>STATISTICS & GRAPH INFORMATION</small>-->
+    </div>
+  </div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading font-bold">DETAILS</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="zumba_venue_create" id="zumba_venue_create">
+      <input type="hidden" class="ignore" name="actions" id="actions" value="zumba_venue_create">
+      <input type="hidden" class="ignore" name="action_title" id="action_title" value="CREATE ZUMBA VENUE">
+      <input type="hidden" class="ignore user_id" name="user_id" id="user_id" value="">
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-md-12">
+              <label>Location/Venue</label>
+              <input type="text" name="name" id="name" class="form-control required" data-error="Please fill in the name of location of this wellness day" value="">
+            </div>
+          </div>
+        </div>        
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" id="submit" class="btn btn-sm btn-primary">CREATE</button>
+              <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>

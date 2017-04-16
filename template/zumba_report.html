@@ -1,0 +1,110 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-sm-8 col-xs-12">
+      <h3 class="m-b-none m-t-sm">ZUMBA REPORT(S)</h3>
+    </div>
+    <div class="col-sm-4 hidden-xs">
+      <button href="#" class="btn btn-success m-t pull-right hidden-print" onClick="window.print();">Print</button>
+    </div>
+  </div>
+</div>
+
+<!--period filter-->
+<section class="panel panel-default hidden-print">
+  <header class="panel-heading font-bold">FILTER PERIOD</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="zumba_report" id="zumba_report">
+      <input type="hidden" class="ignore" name="actions" id="actions" value="zumba_report">
+      <input type="hidden" class="ignore" name="action_title" id="action_title" value="REPORT">
+      <input type="hidden" class="ignore user_id" name="user_id" id="user_id" value="">
+
+      <div class="form-group">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>From</label>
+              <input type="text" name="fromdate" id="fromdate" data-date-format="yyyy-mm-dd" class="form-control datepicker-input required" data-error="Please select the period you want to analyse" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>To</label>
+              <input type="text" name="todate" id="todate" data-date-format="yyyy-mm-dd" class="form-control datepicker-input required" data-error="Please select the period you want to analyse" value="">
+            </div>
+          </div>
+        </div>        
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" id="submit" class="btn btn-sm btn-primary">FILTER</button>
+              <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>
+
+<!--stats panel-->
+<section class="panel panel-default" id="stats-panel">
+  <div class="row m-l-none m-r-none bg-light lter">
+    <div class="col-sm-6 col-xs-6 padder-v b-r b-light lt">
+      <span class="fa-stack fa-2x pull-left m-r-sm">
+        <i class="fa fa-circle fa-stack-2x text-info"></i>
+        <i class="fa fa-user fa-stack-1x text-white"></i>
+      </span>
+      <a class="clear" data-link="sales" href="#">
+        <span class="h3 block m-t-xs"><strong class="" id="stat-num_principals"></strong></span>
+        <small class="text-muted text-uc" id="stat-total-sales-text">PRINCIPALS</small>
+      </a>
+    </div>
+    <div class="col-sm-6 col-xs-6 padder-v b-r b-light">
+      <span class="fa-stack fa-2x pull-left m-r-sm">
+        <i class="fa fa-circle fa-stack-2x text-danger"></i>
+        <i class="fa fa-user fa-stack-1x text-white"></i>
+      </span>
+      <a class="clear" data-link="items_sold" href="#">
+        <span class="h3 block m-t-xs"><strong class="" id="stat-num-dep"></strong></span>
+        <small class="text-muted text-uc" id="stat-num-item-text">DEPENDANTS</small>
+      </a>
+    </div>   
+  </div>
+</section>
+
+<section class="panel panel-default" id="attendance-graph">
+  <header class="panel-heading font-bold">ATTENDANCE</header>
+  <div class="panel-body">
+    <div id="graph-data" style="height:210px"></div>
+  </div>
+</section>
+
+<!--attendance table-->
+<section class="panel panel-default">
+  <header class="panel-heading flex-heading">
+    ATTENDANCE
+    <i class="fa fa-info-sign text-muted" data-toggle="tooltip" data-placement="bottom" data-title="ajax to load the data."></i> 
+  </header>
+  <div class="table-responsive">
+    <table class="table table-striped m-b-none" id="attendance-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Insurer</th>
+          <th>Venue</th>
+          <th>No Dep</th>
+          <th>Date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="" id="attendance-grid">
+      </tbody>
+    </table>
+  </div>
+</section>
+
+                
+            
+        

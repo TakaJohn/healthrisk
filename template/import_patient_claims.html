@@ -1,0 +1,70 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <h3 class="m-b-none m-t-sm flex-heading">IMPORT PATIENT CLAIMS</h3>
+      <!--<small>STATISTICS & GRAPH INFORMATION</small>-->
+    </div>
+  </div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading font-bold">DATA DETAILS</header>
+  <div class="panel-body">
+  <div class="block col-md-12 col-sm-12 col-xs-12 m-b">
+      <div class="col-md-8 col-sm-8 col-xs-8 m-l-n">
+        <img src="images/patient_claims.jpg" class="img-responsive">
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-4">
+        <span class="fa-stack fa-2x pull-left m-r-sm">
+        <i class="fa fa-circle fa-stack-2x text-info"></i>
+        <i class="fa fa-info fa-stack-1x text-white"></i>
+        </span>
+        <div class="clear"><ol>
+          <li>This section is for uploading claims.</li>
+          <li>Save your file in a .csv file format from microsft excell.</li>
+          <li>In the layout shown.</li>
+          <li>Remove all column headings.</li>
+          <li>and remain with just the values.</li>
+        </ol></div>
+      </div>
+    </div>
+    <form role="form" class="form-horizontal" name="import_patient_claims" id="import_patient_claims">
+      <input type="hidden" class="ignore" name="actions" id="actions" value="import_patient_claims">
+      <input type="hidden" class="ignore" name="action_title" id="action_title" value="IMPORT DATA">
+      <input type="hidden" class="ignore" name="user_id" id="user_id" value="">
+      <input type="hidden" class="required ignore" data-error="Please attach c.s.v file" name="file" id="file" value="">
+      
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-3 col-xs-6">
+              <label class="block">Data File <span class="text-danger small">.csv file</span></label>
+              <div class="dker text-center line-dashed">
+                <a href="#" class="profile-file">
+                  <div class="cv-image font-bold wrapper">ADD C.S.V FILE</div>
+                </a>
+              </div>
+              <input type="file" id="file-load" name="files[]" class="hide" multiple>
+              <div class="file-upload progress progress-sm progress-striped active hide">
+                <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="0%" style="width: 0%"></div>
+              </div>
+              <div class="file-upload-status hide">Status</div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" id="submit" class="btn btn-sm btn-primary">SUBMIT</button>
+              <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>

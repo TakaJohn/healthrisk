@@ -1,0 +1,221 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <h3 class="m-b-none m-t-sm flex-heading">HEALTH DATA</h3>
+      <small>Collected health data</small>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <a href="#" data-link="upload_data.php" class="btn btn-info m-t-sm history pull-right hide"> HISTORY</a>
+    </div>
+  </div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading font-bold flex-heading">PATIENT DATA</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="update_patient_data" id="update_patient_data" autocomplete="off">
+      <input type="hidden" class="ignore" name="actions" id="actions" value="update_patient_data">
+      <input type="hidden" class="ignore" name="action_title" id="action_title" value="UPDAE PATIENT DATA">
+      <input type="hidden" class="ignore" name="user_id" id="user_id" value="">
+      <input type="hidden" class="ignore" name="id" id="id" value="">
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <label>Medical Aid</label>
+              <select class="form-control required" data-error="Please medical aid provider" name="medaid" id="medaid" placeholder="" value="">
+                <option value=""> Select medical aid </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group meddetails hide">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Medical Aid #</label>
+              <input type="text" class="form-control" data-error="Please fill in medical aid number" name="medaidnumber" id="medaidnumber" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Suffix #</label>
+              <input type="number" class="form-control" data-error="Please fill in suffix number" name="suffix" id="suffix" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group patient-names hide">
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" data-error="Please fill in medical aid number" name="name" id="surname" placeholder="" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>Surname</label>
+                <input type="text" class="form-control" data-error="Please fill in surname" name="surname" id="surname" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-12">
+              <label>Wellness Day</label>
+              <select class="form-control" data-error="" name="wellnessday" id="wellnessday" placeholder="" value="">
+              <option value=""> Select wellness day </option>
+            </select>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Email</label>
+              <input type="email" class="form-control" data-error="Please fill in email address" name="email" id="email" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Mobile</label>
+              <input type="number" class="form-control" data-error="Please fill in mobile number" name="mobile" id="mobile" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Height</label>
+              <div class="input-group">
+              <input type="number" class="form-control" data-error="Please fill in height" name="height" id="height" placeholder="" value="">
+              <span class="input-group-addon">cm</span>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Weight</label>
+              <div class="input-group">
+              <input type="number" class="form-control" data-error="Please fill in weight" name="weight" id="weight" placeholder="" value="">
+              <span class="input-group-addon">Kg's</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>B.M.I</label>
+              <input type="text" class="form-control" data-error="Please fill in bmi" name="bmi" id="bmi" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Cholestroral</label>
+              <input type="text" class="form-control" data-error="Please fill in cholestroral" name="cholestroral" id="cholestroral" placeholder="" value="">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Blood Sugar</label>
+              <input type="text" class="form-control" data-error="Please fill in blood sugar" name="bloodsugar" id="bloodsugar" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>HIV</label>
+              <select class="form-control" data-error="Please select HIV status" name="hiv" id="hiv" placeholder="" value="">
+                <option value=""> Select HIV Status </option>
+                <option value="1"> Positive </option>
+                <option value="0"> Negative </option>
+              </select>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>B.P</label>
+              <input type="text" class="form-control" data-error="Please fill in B.P" name="bp" id="bp" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Pulse Rate</label>
+              <input type="text" class="form-control" data-error="Please fill in pulse rate" name="pulserate" id="pulserate" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <label>Pathology</label>
+              <select class="form-control" data-error="Please select pathology results" name="pathology" id="pathology" placeholder="" value="">
+                <option value=""> Select Result </option>
+                <option value="1"> Yes </option>
+                <option value="0"> No </option>
+                <option value="2"> Maybe </option>
+              </select>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <label>Risk Profile</label>
+              <select class="form-control" data-error="Please select risk profile" name="risk" id="risk" placeholder="" value="">
+                <option value=""> Select Profile </option>
+                <option value="0"> Low </option>
+                <option value="1"> Moderate </option>
+                <option value="2"> High </option>
+                <option value="3"> Very High </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <label>Notes</label>
+              <textarea class="form-control" data-error="Please fill in notes" name="notes" id="notes" placeholder="fill in patient notes">
+                
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-6">
+                <button type="submit" id="submit" class="btn btn-md btn-primary">UPDATE</button>
+	            <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+	        </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>
+            

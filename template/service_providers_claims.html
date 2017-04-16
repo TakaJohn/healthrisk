@@ -1,0 +1,70 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-sm-10 col-xs-12">
+      <h3 class="m-b-none m-t-sm">SERVICE PROVIDERS CLAIMS</h3>
+      <!--<small>STATISTICS & GRAPH INFORMATION</small>-->
+    </div>
+  </div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading font-bold">FILTER PERIOD</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="service_provider_claims" id="service_provider_claims">
+      <input type="hidden" class="ignore" name="actions" id="actions" value="service_provider_claims">
+      <input type="hidden" class="ignore" name="action_title" id="action_title" value="CLAIMS">
+      <input type="hidden" class="ignore user_id" name="user_id" id="user_id" value="">
+      <input type="hidden" class="ignore" name="practiceno" id="practiceno" value="">
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-6">
+              <label>From</label>
+              <input type="text" name="fromdate" id="fromdate" data-date-format="yyyy-mm-dd" class="form-control datepicker-input required" data-error="Please select the period you want to analyse" value="">
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-6">
+              <label>To</label>
+              <input type="text" name="todate" id="todate" data-date-format="yyyy-mm-dd" class="form-control datepicker-input required" data-error="Please select the period you want to analyse" value="">
+            </div>
+          </div>
+        </div>        
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" id="submit" class="btn btn-sm btn-primary">SUBMIT</button>
+              <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>
+
+<section class="panel panel-default">
+  <header class="panel-heading flex-heading">
+    CLAIM(S) 
+    <i class="fa fa-info-sign text-muted" data-toggle="tooltip" data-placement="bottom" data-title="ajax to load the data."></i> 
+  </header>
+  <div class="table-responsive">
+    <table class="table table-striped m-b-none claims-table" data-ride="datatables">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Member #</th>
+          <th>Claim #</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="claims-grid">
+      </tbody>
+    </table>
+  </div>
+</section>  

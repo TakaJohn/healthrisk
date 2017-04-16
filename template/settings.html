@@ -1,0 +1,248 @@
+<div class="m-b-md">
+<div class="row">
+  <div class="col-sm-10">
+    <h3 class="m-b-none m-t-sm flex-heading">SETTINGS</h3>
+  </div>
+</div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading bg-light">
+    <ul class="nav nav-tabs pull-left">
+      <li class="active"><a href="#company_details" data-toggle="tab"><i class="fa fa-briefcase text-default"></i>Details</a></li>
+      <li><a href="#communications" data-toggle="tab"><i class="fa fa-bullhorn text-default"></i> Communications</a></li>
+      <li><a href="#financials" data-toggle="tab"><i class="fa fa-money text-default"></i> Financials</a></li>
+    </ul>
+    <span class="hidden-sm">&nbsp;</span>
+  </header>
+  <div class="panel-body">
+    <div class="tab-content">
+      <div class="tab-pane active" id="company_details">
+        <form class="form-horizontal" name="update_company_details" id="update_company_details">
+          <input type="hidden" class="ignore" name="actions" id="actions" value="update_company_details" />
+          <input type="hidden" class="ignore" name="user_id" id="user_id" value="" />
+          <input type="hidden" class="ignore" name="logo" id="logo" data-error="Please attach company logo">
+          
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-3 col-xs-6">
+                <label class="block">Logo <small class="font-thin text-danger">(required)</small></label>                        
+                  <div class="dker text-center line-dashed">
+                    <a href="#" class="logo-pic">
+                      <img width="100%" class="logo-image" src="images/avatar_default.jpg">
+                    </a>
+                  </div>
+                  <input type="file" id="logo-load" name="files[]" class="hide" multiple>
+                  <div class="logo-upload progress progress-sm progress-striped active hide">
+                    <div class="progress-bar progress-bar-success" data-toggle="tooltip" data-original-title="0%" style="width: 0%"></div>
+                  </div>
+                <div class="logo-upload-status hide">Status</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>Name</label>
+                <input type="text" class="form-control required" data-error="Please fill in company name" name="name" id="name" placeholder="Company name" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>Address</label>
+                <input type="text" class="form-control required" data-error="Please fill in company address" name="address" id="address" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>Area</label>
+                  <input type="text" class="form-control" data-error="Please fill in address area e.g Greendale, Hatfield..."  name="area" id="area" placeholder="e.g Greendale, Hatfield" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>City</label>
+                <input type="text" class="form-control" data-error="Please fill in address city e.g Harare, Bulawayo, Mutare..." name="city" id="city" placeholder="e.g Harare, Bulawayo, Mutare ...." value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4">
+                <label>Phone</label>
+                  <input type="text" class="form-control" data-error="Please fill in company phone number"  name="phone" id="phone" placeholder="" value="">
+              </div>
+              <div class="col-sm-4">
+                <label>Mobile</label>
+                <input type="text" class="form-control" data-error="Please fill in company mobile number" name="mobile" id="mobile" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4">
+                <label>Email</label>
+                <input type="email" class="form-control required" data-error="Please fill in email address." name="email" id="email" placeholder="Enter email" value="">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-12 status">
+              </div>
+            </div>  
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-12">
+                <button type="submit" id="submit" class="btn btn-sm btn-primary">UPDATE</button>
+                <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <div class="tab-pane" id="communications">  
+        <form class="form-horizontal" name="update_company_communications" id="update_company_communications">
+          <input type="hidden" name="actions" id="actions" value="update_company_communications" />
+          <input type="hidden" name="user_id" id="user_id" value="" />
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4">
+                <label>Administrator Email</label>
+                <input type="text" class="form-control required" data-error="Please fill in administrators email"  name="admin_email" id="admin_email" placeholder="" value="">
+              </div>
+              <div class="col-sm-4">
+                <label>Marketing Email</label>
+                <input type="text" class="form-control" data-error="" name="marketing_email" id="marketing_email" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>SMTP Host</label>
+                <input type="text" class="form-control" data-error="Please fill in SMTP host details"  name="smtp_host" id="smtp_host" placeholder="" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>SMTP Port</label>
+                <input type="number" class="form-control" data-error="Please fill in SMTP port details" name="smtp_port" id="smtp_port" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>SMTP Username</label>
+                <input type="text" class="form-control required" data-error="Please fill in SMTP username details"  name="smtp_username" id="smtp_username" placeholder="" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>SMTP Password</label>
+                <input type="password" class="form-control required" data-error="Please fill in SMTP password details" name="smtp_password" id="smtp_password" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <label>SMS/TEXT Username</label>
+                <input type="text" class="form-control" data-error=""  name="sms_username" id="sms_username" placeholder="" value="">
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <label>SMS/TEXT Password</label>
+                <input type="text" class="form-control" data-error="" name="sms_password" id="sms_password" placeholder="" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-12 status">
+              </div>
+            </div>  
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-12">
+                <button type="submit" id="submit" class="btn btn-sm btn-primary">UPDATE</button>
+                <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="tab-pane" id="financials">
+        <form class="form-horizontal" name="update_company_financials" id="update_company_financials">
+          <input type="hidden" name="actions" id="actions" value="update_company_financials" />
+          <input type="hidden" name="user_id" id="user_id" value="" />
+            
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                  <label>Sales Tax (%)</label>
+                  <div class="input-group m-b">
+                    <input type="number" class="form-control" data-error=""  name="sales_tax" id="sales_tax" placeholder="" value="">
+                    <span class="input-group-addon">%</span>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                  <label>VAT Number/BP Number</label>
+                  <input type="text" class="form-control" data-error="" name="vat_number" id="vat_number" placeholder="" value="">
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-4">
+                  <label>Bank</label>
+                  <input type="text" class="form-control" data-error=""  name="bank" id="bank" placeholder="" value="">
+                </div>
+                <div class="col-sm-4">
+                  <label>Account Name</label>
+                  <input type="text" class="form-control" data-error="" name="account_name" id="account_name" placeholder="" value="">
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-4">
+                  <label>Account Number</label>
+                  <input type="text" class="form-control" data-error=""  name="account_number" id="account_number" placeholder="" value="">
+                </div>
+                <div class="col-sm-4">
+                  <label>Branch</label>
+                  <input type="text" class="form-control" data-error="" name="branch" id="branch" placeholder="" value="">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-12 status">
+                </div>
+              </div>  
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-12">
+                  <button type="submit" id="submit" class="btn btn-sm btn-primary">UPDATE</button>
+                  <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+                </div>
+              </div>
+          </div>
+        </form>
+      </div>     
+    </div>
+  </div>
+</section>

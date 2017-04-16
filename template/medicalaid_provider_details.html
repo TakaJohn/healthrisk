@@ -1,0 +1,43 @@
+<div class="m-b-md">
+  <div class="row">
+    <div class="col-sm-10 col-xs-12">
+      <h3 class="m-b-none m-t-sm flex-heading">MEDICAL AID PROVIDER DETAILS</h3>
+      <!--<small>STATISTICS & GRAPH INFORMATION</small>-->
+    </div>
+  </div>
+</div>
+
+<section class="panel panel-default">
+  <header class="panel-heading font-bold">MEDICAL AID PROVIDER DETAILS</header>
+  <div class="panel-body">
+    <form role="form" class="form-horizontal" name="medicalaid_providers_update" id="medicalaid_providers_update" autocomplete="off">
+      <input type="hidden" class="ignore required" name="actions" id="actions" value="medicalaid_providers_update">
+      <input type="hidden" class="ignore required" name="action_title" id="action_title" value="UPDATE MEDICAL AID PROVIDER">
+      <input type="hidden" class="ignore" name="user_id" id="user_id" value="">
+      <input type="hidden" class="ignore" name="id" id="id" value="">
+      
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              <label>Name</label>
+              <input type="text" class="form-control" data-error="Please fill in name" name="name" id="name" placeholder="" value="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" id="submit" class="btn btn-md btn-primary">UPDATE</button>
+              <img src='images/loaders/indicator-lite.gif' class='m-r-sm form-progress hide'>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div>
+</section>
